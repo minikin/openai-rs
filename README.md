@@ -44,8 +44,4 @@ MIT
 
 ## Contact
 
-Sasha ([@mattt](https://twitter.com/minikin))
-
-[ci badge]: https://github.com/mattt/OpenAI/workflows/CI/badge.svg
-[documentation badge]: https://github.com/mattt/OpenAI/workflows/Documentation/badge.svg
-[documentation]: https://github.com/mattt/OpenAI/wiki
+Sasha ([@minikin](https://twitter.com/minikin))
