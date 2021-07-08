@@ -13,9 +13,9 @@ pub struct File {
     pub filename: String,
 
     /// The size in bytes.
-    pub size: i64,
+    pub size: u64,
 
-    pub created: i64
+    pub created: u64
 }
 
 // An uploaded file.

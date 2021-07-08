@@ -17,7 +17,7 @@ pub struct Engine {
     pub id: EngineId,
     pub owner: String,
     pub ready: bool,
-    created: Option<i64>
+    created: Option<u64>
 }
 
 /// A unique identifier for the engine.
