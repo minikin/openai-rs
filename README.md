@@ -1,7 +1,4 @@
-# OpenAI
-
-![CI][ci badge]
-[![Documentation][documentation badge]][documentation]
+# openai-rs
 
 A Rust client for the [OpenAI API](https://beta.openai.com/).
 
