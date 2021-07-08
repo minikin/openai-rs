@@ -1,4 +1,4 @@
-
+use serde::{Deserialize};
 ///  Engines describe and provide access to the various models available in the API.
 ///
 ///  OpenAI’s API provides access to several different engines - Ada, Babbage, Curie and Davinci.
