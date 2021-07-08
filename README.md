@@ -7,6 +7,10 @@ A Rust client for the [OpenAI API](https://beta.openai.com/).
 - Rust 1.53.0+
 - An OpenAI API Key
 
+
+## Installation
+
+
 ## Example Usage
 
 
