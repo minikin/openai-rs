@@ -46,4 +46,4 @@ Post issues and feature requests on the GitHub [issue tracker](https://github.co
 ## License
 
 The source code of openai-rs project is available under the MIT license.
-See the [LICENSE](https://github.com/minikin/openai-rs/main/LICENSE) file for more info.
+See the [LICENSE](https://github.com/minikin/openai-rs/blob/main/LICENSE) file for more info.
