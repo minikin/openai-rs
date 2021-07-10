@@ -39,10 +39,11 @@ TODO:-
 TODO:-
 ```
 
+## Support
+
+Post issues and feature requests on the GitHub [issue tracker](https://github.com/minikin/openai-rs/issues).
+
 ## License
 
-MIT
-
-## Contact
-
-Sasha ([@minikin](https://twitter.com/minikin))
+The source code of openai-rs project is available under the MIT license.
+See the [LICENSE](https://github.com/minikin/openai-rs/main/LICENSE) file for more info.
