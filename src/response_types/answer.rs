@@ -8,19 +8,19 @@ use serde::{Deserialize, Serialize}
 /// based on the information in the set of documents.
 /// This is useful for question-answering applications on sources of truth,
 /// like company documentation or a knowledge base.
-#[derive( Deserialize, Clone,  Debug,)]
+#[derive(Deserialize, Debug, Eq, PartialEq, Clone)]
 pub struct Answer {
      /// The completion for the answer.
-    pub completion: String
+    pub completion: String,
 
     /// The possible answers.
-    pub answers: Vec<String>
+    pub answers: Vec<String>,
 
     /// The engine used to answer the question
-    pub engine: EngineId
+    pub engine: EngineId,
 
     /// The engine used for searching.
-    pub search_engine: EngineId
+    pub search_engine: EngineId,
 
     /// The documents selected for each answer.
     pub selectedDocuments: HashMap<i64, String>,
