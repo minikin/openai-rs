@@ -1,5 +1,8 @@
-use std::{fmt::Display};
-use serde::{Deserialize}
+use std:: fmt::Display;
+use serde:: Deserialize;
+use supporting_types:: engine;
+
+mod supporting_types;
 
 /// The result of a completion request.
 ///
@@ -43,7 +46,7 @@ impl fmt::Display for Choice {
 #[derive(Deserialize, Debug, Clone)]
 pub enum FinishReason {
     /// The completion finished because it reached a maximum token limit.
-    Length
+    Length,
 
     /// The completion finished because it encountered a stop word.
     Stop

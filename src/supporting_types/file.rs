@@ -1,4 +1,4 @@
-use serde::{Deserialize};
+use serde::Deserialize;
 
 // An uploaded file.
 //
@@ -15,7 +15,7 @@ pub struct File {
     /// The size in bytes.
     pub size: u64,
 
-    pub created: u64
+    pub created: u64,
 }
 
 // An uploaded file.
@@ -25,11 +25,11 @@ pub struct File {
 #[derive(Deserialize, Debug, Eq, PartialEq, Clone)]
 pub enum Purpose {
     /// The purpose of the file.
-    Search
+    Search,
 
     /// Answering questions.
-    Answers
+    Answers,
 
     /// Classification.
-    Classifications
+    Classifications,
 }

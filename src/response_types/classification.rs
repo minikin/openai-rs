@@ -1,4 +1,7 @@
-use serde::{Deserialize}
+use serde:: Deserialize;
+use supporting_types::EngineId;
+
+mod supporting_types;
 
 /// The result of a classification request.
 ///
@@ -27,10 +30,10 @@ pub struct Classification {
 pub struct Example {
 
     /// The source of the example.
-    pub  source: Source
+    pub  source: Source,
 
     /// The classification label for the example.
-    pub  label: String
+    pub  label: String,
 
     /// The text of the example.
     pub  text: String
@@ -40,7 +43,7 @@ pub struct Example {
 #[derive(Deserialize, Debug, PartialEq, Eq, Clone)]
 pub enum Source {
     /// A document identified by its position.
-    Document(u64)
+    Document(u64),
 
     /// A file
     File(File)

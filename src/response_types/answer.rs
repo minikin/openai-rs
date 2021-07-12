@@ -1,5 +1,6 @@
 use std::{collections::HashMap, fmt::Display};
-use serde::{Deserialize, Serialize}
+use serde::{Deserialize, Serialize};
+use crate::supporting_types::EngineId;
 
 /// The result of a question answering request.
 ///

@@ -1,4 +1,4 @@
-use serde::{Deserialize};
+use serde::Deserialize;
 ///  Engines describe and provide access to the various models available in the API.
 ///
 ///  OpenAI’s API provides access to several different engines - Ada, Babbage, Curie and Davinci.
@@ -17,7 +17,7 @@ pub struct Engine {
     pub id: EngineId,
     pub owner: String,
     pub ready: bool,
-    created: Option<u64>
+    created: Option<u64>,
 }
 
 /// A unique identifier for the engine.
@@ -60,5 +60,5 @@ pub enum EngineId {
     //
     // Good at: Language translation, complex classification, text sentiment, summarization
     Davinci,
-    Other(String)
+    Other(String),
 }
