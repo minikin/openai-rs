@@ -1,4 +1,5 @@
 use supporting_types::Sampling;
+pub mod response_types;
 pub mod supporting_types;
 
 pub fn main() {

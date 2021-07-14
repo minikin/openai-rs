@@ -1,6 +1,6 @@
-use std::{collections::HashMap, fmt::Display};
-use serde::{Deserialize, Serialize};
 use crate::supporting_types::EngineId;
+use serde::Deserialize;
+use std::{collections::HashMap, fmt};
 
 /// The result of a question answering request.
 ///
@@ -11,7 +11,7 @@ use crate::supporting_types::EngineId;
 /// like company documentation or a knowledge base.
 #[derive(Deserialize, Debug, Eq, PartialEq, Clone)]
 pub struct Answer {
-     /// The completion for the answer.
+    /// The completion for the answer.
     pub completion: String,
 
     /// The possible answers.
@@ -24,5 +24,15 @@ pub struct Answer {
     pub search_engine: EngineId,
 
     /// The documents selected for each answer.
-    pub selectedDocuments: HashMap<i64, String>,
+    pub selected_documents: HashMap<i64, String>,
+}
+
+impl fmt::Display for Answer {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "({}, {:?}, {}, {}, {:?})",
+            self.completion, self.answers, self.engine, self.search_engine, self.selected_documents,
+        )
+    }
 }

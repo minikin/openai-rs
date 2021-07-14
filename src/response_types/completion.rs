@@ -1,6 +1,7 @@
-use std:: fmt::Display;
-use serde:: Deserialize;
-use supporting_types:: EngineId;
+use serde::Deserialize;
+use std::fmt;
+
+use crate::supporting_types::EngineId;
 
 /// The result of a completion request.
 ///
@@ -21,7 +22,7 @@ pub struct Completion {
     pub engine: EngineId,
 }
 
-  /// A completion choice.
+/// A completion choice.
 #[derive(Deserialize, Debug, Clone)]
 pub struct Choice {
     /// The text of the completion choice.
@@ -47,5 +48,5 @@ pub enum FinishReason {
     Length,
 
     /// The completion finished because it encountered a stop word.
-    Stop
+    Stop,
 }

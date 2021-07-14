@@ -1,5 +1,7 @@
-use serde:: Deserialize;
-use supporting_types::EngineId;
+use serde::Deserialize;
+use std::fmt;
+
+use crate::supporting_types::{EngineId, File};
 
 /// The result of a classification request.
 ///
@@ -23,18 +25,33 @@ pub struct Classification {
     pub example: Example,
 }
 
- /// A classification example.
+impl fmt::Display for Classification {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "({}, {}, {}, {}, {})",
+            self.completion, self.label, self.engine, self.search_engine, self.example,
+        )
+    }
+}
+
+/// A classification example.
 #[derive(Deserialize, Debug, PartialEq, Eq, Clone)]
 pub struct Example {
-
     /// The source of the example.
-    pub  source: Source,
+    pub source: Source,
 
     /// The classification label for the example.
-    pub  label: String,
+    pub label: String,
 
     /// The text of the example.
-    pub  text: String
+    pub text: String,
+}
+
+impl fmt::Display for Example {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "({}, {}, {},)", self.source, self.label, self.text)
+    }
 }
 
 /// The source of an example
@@ -44,5 +61,11 @@ pub enum Source {
     Document(u64),
 
     /// A file
-    File(File)
+    File(File),
+}
+
+impl fmt::Display for Source {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "({:?})", self)
+    }
 }
