@@ -1,8 +1,6 @@
 use std:: fmt::Display;
 use serde:: Deserialize;
-use supporting_types:: engine;
-
-mod supporting_types;
+use supporting_types:: EngineId;
 
 /// The result of a completion request.
 ///

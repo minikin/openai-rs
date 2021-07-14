@@ -1,4 +1,5 @@
 use serde::Deserialize;
+use std::fmt;
 ///  Engines describe and provide access to the various models available in the API.
 ///
 ///  OpenAI’s API provides access to several different engines - Ada, Babbage, Curie and Davinci.
@@ -18,6 +19,16 @@ pub struct Engine {
     pub owner: String,
     pub ready: bool,
     created: Option<u64>,
+}
+
+impl fmt::Display for Engine {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "({}, {}, {}, {:?})",
+            self.id, self.owner, self.ready, self.created,
+        )
+    }
 }
 
 /// A unique identifier for the engine.
@@ -61,4 +72,10 @@ pub enum EngineId {
     // Good at: Language translation, complex classification, text sentiment, summarization
     Davinci,
     Other(String),
+}
+
+impl fmt::Display for EngineId {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "({:?})", self,)
+    }
 }

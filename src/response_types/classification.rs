@@ -1,8 +1,6 @@
 use serde:: Deserialize;
 use supporting_types::EngineId;
 
-mod supporting_types;
-
 /// The result of a classification request.
 ///
 /// Given a query and a set of labeled examples,
