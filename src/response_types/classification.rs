@@ -1,5 +1,4 @@
 use serde::Deserialize;
-use std::fmt;
 
 use crate::supporting_types::{EngineId, File};
 
@@ -25,16 +24,6 @@ pub struct Classification {
     pub example: Example,
 }
 
-impl fmt::Display for Classification {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(
-            f,
-            "({}, {}, {}, {}, {})",
-            self.completion, self.label, self.engine, self.search_engine, self.example,
-        )
-    }
-}
-
 /// A classification example.
 #[derive(Deserialize, Debug, PartialEq, Eq, Clone)]
 pub struct Example {
@@ -48,12 +37,6 @@ pub struct Example {
     pub text: String,
 }
 
-impl fmt::Display for Example {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "({}, {}, {},)", self.source, self.label, self.text)
-    }
-}
-
 /// The source of an example
 #[derive(Deserialize, Debug, PartialEq, Eq, Clone)]
 pub enum Source {
@@ -62,10 +45,4 @@ pub enum Source {
 
     /// A file
     File(File),
-}
-
-impl fmt::Display for Source {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "({:?})", self)
-    }
 }

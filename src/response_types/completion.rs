@@ -1,5 +1,4 @@
 use serde::Deserialize;
-use std::fmt;
 
 use crate::supporting_types::EngineId;
 
@@ -33,12 +32,6 @@ pub struct Choice {
 
     /// The reason why the completion finished.
     pub finish_reason: FinishReason,
-}
-
-impl fmt::Display for Choice {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        self.text.fmt(f)
-    }
 }
 
 /// The reason why the completion finished.

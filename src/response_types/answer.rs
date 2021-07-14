@@ -1,6 +1,6 @@
 use crate::supporting_types::EngineId;
 use serde::Deserialize;
-use std::{collections::HashMap, fmt};
+use std::collections::HashMap;
 
 /// The result of a question answering request.
 ///
@@ -25,14 +25,4 @@ pub struct Answer {
 
     /// The documents selected for each answer.
     pub selected_documents: HashMap<i64, String>,
-}
-
-impl fmt::Display for Answer {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(
-            f,
-            "({}, {:?}, {}, {}, {:?})",
-            self.completion, self.answers, self.engine, self.search_engine, self.selected_documents,
-        )
-    }
 }

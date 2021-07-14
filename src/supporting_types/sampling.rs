@@ -1,7 +1,7 @@
-use std::fmt;
+use serde::Deserialize;
 
 /// The sampling method used by a model in completing a request.
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Deserialize, Debug, PartialEq, Clone)]
 pub enum Sampling {
     // Sampling temperature.
     //
@@ -15,10 +15,4 @@ pub enum Sampling {
     // The model considers the results of the tokens with top_p probability mass.
     // So 0.1 means only the tokens comprising the top 10% probability mass are considered.
     Nucleus(f64),
-}
-
-impl fmt::Display for Sampling {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "({:?})", self,)
-    }
 }
