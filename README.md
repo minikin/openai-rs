@@ -1,5 +1,7 @@
 # openai-rs
 
+[![Rust](https://github.com/minikin/openai-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/minikin/openai-rs/actions/workflows/rust.yml)
+
 A Rust client for the [OpenAI API](https://beta.openai.com/).
 
 ## Requirements
