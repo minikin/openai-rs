@@ -3,5 +3,5 @@ pub mod response_types;
 pub mod supporting_types;
 
 pub fn main() {
-    let _ = (Sampling::Nucleus(12.0), Sampling::Temperature(23.1));
+  let _ = (Sampling::Nucleus(12.0), Sampling::Temperature(23.1));
 }
