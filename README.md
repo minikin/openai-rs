@@ -6,7 +6,7 @@ A Rust client for the [OpenAI API](https://beta.openai.com/).
 
 ## Requirements
 
-- Rust 1.53.0+
+- Rust 1.49.0+
 - An OpenAI API Key
 
 
