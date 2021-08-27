@@ -12,9 +12,9 @@ license-file = "LICENSE"
 derive_builder = "^0.10.2"
 reqwest = { version = "0.11.4", features = ["json"] }
 serde = { version = "^1.0.126", features = ["derive"] }
-serde_json = { version="^1.0.64"}
+serde_json = { version = "1.0.66" }
 thiserror = "^1.0.26"
-tokio = { version = "1.8.1", features = ["full"] }
+tokio = { version = "1.10.1", features = ["full"] }
 
 [dev-dependencies]
 mockito = "0.30.0"
