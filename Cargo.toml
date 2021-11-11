@@ -1,7 +1,7 @@
 [package]
 name = "openai-rs"
 version = "0.1.0"
-edition = "2018"
+edition = "2021"
 authors = ["Sasha Prokhorenko <djminikin@gmail.com>"]
 description = "A Rust client for the OpenAI API"
 homepage = "https://github.com/minikin/openai-rs"
@@ -10,10 +10,10 @@ license-file = "LICENSE"
 
 [dependencies]
 derive_builder = "^0.10.2"
-reqwest = { version = "0.11.4", features = ["json"] }
-serde = { version = "^1.0.126", features = ["derive"] }
-serde_json = { version = "1.0.66" }
-thiserror = "^1.0.26"
+reqwest = { version = "0.11.6", features = ["json"] }
+serde = { version = "1.0.130", features = ["derive"] }
+serde_json = { version = "1.0.67" }
+thiserror = "1.0.30"
 tokio = { version = "1.10.1", features = ["full"] }
 
 [dev-dependencies]
