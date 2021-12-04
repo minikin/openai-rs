@@ -14,7 +14,7 @@ reqwest = { version = "0.11.6", features = ["json"] }
 serde = { version = "1.0.130", features = ["derive"] }
 serde_json = { version = "1.0.67" }
 thiserror = "1.0.30"
-tokio = { version = "1.10.1", features = ["full"] }
+tokio = { version = "1.14.0", features = ["full"] }
 
 [dev-dependencies]
 mockito = "0.30.0"
